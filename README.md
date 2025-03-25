@@ -12,3 +12,5 @@ Be careful—the program is recording, so avoid moving
 outside of your playfield range before the program
 finishes.
 10) Play as if you were playing yourself, and tap if you want
+============================================================
+I created this fork because the maps doesn't have same durations lol
