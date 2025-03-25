@@ -158,13 +158,23 @@ def main(
 
     again = typer.confirm("Want to record again?", default=True, prompt_suffix=" ")
     if again:
-        return main(
-            screen_width_px,
-            screen_height_px,
-            tablet_width_mm,
-            tablet_height_mm,
-            duration,
-        )
+            new_area = typer.confirm("Want to change your area?", default=False, prompt_suffix=" ")
+            if new_area:
+                return main(
+                screen_width_px,
+                screen_height_px,
+                tablet_width_mm = float(input("Enter your full active tablet area width in mm: ")),
+                tablet_height_mm = float(input("Enter your full active tablet area height in mm: ")),
+                duration = int(input("Enter duration: ")),
+                )
+            else:
+                return main(
+                screen_width_px,
+                screen_height_px,
+                tablet_width_mm,
+                tablet_height_mm,
+                duration = int(input("Enter duration: ")),
+                )
     rprint("===================")
     rprint("Thank you for using the Area Calculator!")
     rprint(
